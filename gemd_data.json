@@ -1,0 +1,1060 @@
+{
+  "materials": [
+    {
+      "type": "material",
+      "name": "Antiferro octupolar order in the $5 \\mathrm{~d}^{1}$ double perovskite $\\mathrm{Sr}_{2} \\mathrm{MgReO}_{6}$ and its spectroscopic signatures",
+      "formula": "Sr}_{2} \\mathrm{MgReO}_{6",
+      "template": {
+        "type": "template",
+        "name": "Material Template",
+        "uids": [
+          "98889088-8a56-4606-8ebb-37e061c019f7"
+        ],
+        "description": "Template for material properties and conditions"
+      },
+      "spec": {
+        "type": "spec",
+        "name": "Antiferro octupolar order in the $5 \\mathrm{~d}^{1}$ double perovskite $\\mathrm{Sr}_{2} \\mathrm{MgReO}_{6}$ and its spectroscopic signatures Spec",
+        "uids": [
+          "4814c6be-fd19-4441-b487-ae2b18f0bc3c"
+        ],
+        "notes": "Specification for material properties and conditions",
+        "template": {
+          "type": "template",
+          "name": "Material Template",
+          "uids": [
+            "98889088-8a56-4606-8ebb-37e061c019f7"
+          ],
+          "description": "Template for material properties and conditions"
+        }
+      },
+      "run": {
+        "type": "run",
+        "name": "Antiferro octupolar order in the $5 \\mathrm{~d}^{1}$ double perovskite $\\mathrm{Sr}_{2} \\mathrm{MgReO}_{6}$ and its spectroscopic signatures Run",
+        "uids": [
+          "b7edaff6-12b5-4a1b-bbb3-54449af6c681"
+        ],
+        "spec": {
+          "type": "spec",
+          "name": "Antiferro octupolar order in the $5 \\mathrm{~d}^{1}$ double perovskite $\\mathrm{Sr}_{2} \\mathrm{MgReO}_{6}$ and its spectroscopic signatures Spec",
+          "uids": [
+            "4814c6be-fd19-4441-b487-ae2b18f0bc3c"
+          ],
+          "notes": "Specification for material properties and conditions",
+          "template": {
+            "type": "template",
+            "name": "Material Template",
+            "uids": [
+              "98889088-8a56-4606-8ebb-37e061c019f7"
+            ],
+            "description": "Template for material properties and conditions"
+          }
+        },
+        "notes": "Actual material properties and conditions"
+      },
+      "properties": [
+        {
+          "type": "attribute",
+          "name": "temperature",
+          "value": 2.0,
+          "origin": "measured",
+          "units": "K",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "pressure",
+          "value": 1.0,
+          "origin": "measured",
+          "units": "GPa",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_field",
+          "value": 9.0,
+          "origin": "measured",
+          "units": "T",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "lattice_constant",
+          "value": 0.0,
+          "origin": "measured",
+          "units": "Å",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "band_gap",
+          "value": 7.0,
+          "origin": "measured",
+          "units": "eV",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "conductivity",
+          "value": 7.0,
+          "origin": "measured",
+          "units": "S/m",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "melting_point",
+          "value": 2.0,
+          "origin": "measured",
+          "units": "K",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "curie_temperature",
+          "value": 2.0,
+          "origin": "measured",
+          "units": "K",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "neel_temperature",
+          "value": 92.0,
+          "origin": "measured",
+          "units": "K",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "hardness",
+          "value": 1.0,
+          "origin": "measured",
+          "units": "GPa",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "yield_strength",
+          "value": 1.0,
+          "origin": "measured",
+          "units": "MPa",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "tensile_strength",
+          "value": 1.0,
+          "origin": "measured",
+          "units": "MPa",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "T_N",
+          "value": 92.0,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic moments",
+          "value": 0.06,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "octupole moments",
+          "value": 0.13,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "angle",
+          "value": 25.0,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "delta",
+          "value": 0.0043,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic moment",
+          "value": 0.12,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_moments",
+          "value": 0.06,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "octupole_moments",
+          "value": 0.13,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_moment",
+          "value": 0.8,
+          "origin": "measured",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Measurement Template",
+            "uids": [
+              "8c139605-a498-403b-a35d-f6517482b851"
+            ],
+            "description": "Template for material measurements"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "attribute",
+          "name": "crystal_structure",
+          "value": "tetragonal",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "phase",
+          "value": "PHASE \n\nIn order to resolve the small excitation gap in the AFO case",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "orientation",
+          "value": "oriented within the ab plane with angle of ~25° relative to the x global axis",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "material",
+          "value": "Sr2MgReO6",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "material_type",
+          "value": "double perovskite",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "space_group",
+          "value": "I4/m",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "temperature",
+          "value": "low",
+          "origin": "specified",
+          "units": "K",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "temperature_range",
+          "value": "room temperature to low temperatures",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "crystal_field",
+          "value": "tetragonal",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "octahedral_elongation",
+          "value": "present",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "octahedral_tilt",
+          "value": "present",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "ground_state_multiplet",
+          "value": "j_eff=3/2",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "spin_orbit_coupling",
+          "value": "present",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_moment",
+          "value": 0.8,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_moment_units",
+          "value": "μB/f.u.",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "gyromagnetic_factor",
+          "value": 0.413,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "lattice_parameters_a",
+          "value": 5.578,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "lattice_parameters_a_units",
+          "value": "Å",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "lattice_parameters_c",
+          "value": 7.941,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "lattice_parameters_c_units",
+          "value": "Å",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "tcf_splitting",
+          "value": 28,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "tcf_splitting_units",
+          "value": "meV",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "so_splitting",
+          "value": 0.48,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "so_splitting_units",
+          "value": "eV",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "t2g_eg_splitting",
+          "value": 4.6,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "t2g_eg_splitting_units",
+          "value": "eV",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "volume_shrinkage",
+          "value": 0.4,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "volume_shrinkage_units",
+          "value": "%",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "bond_length_change",
+          "value": "Re-O(z) bond length",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "inplane_bond_length",
+          "value": "fixed",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "phase_transition",
+          "value": "paramagnetic to canted antiferromagnetic",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "phase_transition_type",
+          "value": "two-step",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "octupolar_order",
+          "value": "antiferroic",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "magnetic_order",
+          "value": "collinear dipolar AFM",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "interaction_energy",
+          "value": 4,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "interaction_energy_units",
+          "value": "meV",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "covalency_factor",
+          "value": "present",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "covalency_factor_value",
+          "value": null,
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "experimental_observations",
+          "value": "neutron scattering",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "experimental_observations_details",
+          "value": "elastic and inelastic neutron scattering",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        },
+        {
+          "type": "attribute",
+          "name": "experimental_observations_signatures",
+          "value": "quasi-gapless magnetic excitation spectrum and strong enhancement of Bragg superstructural reflections at large q-vectors",
+          "origin": "specified",
+          "units": "dimensionless",
+          "notes": null,
+          "template": {
+            "type": "template",
+            "name": "Process Template",
+            "uids": [
+              "0ac61dff-eb42-42c4-b689-31e300ad13f2"
+            ],
+            "description": "Template for material processing steps"
+          }
+        }
+      ],
+      "parameters": [],
+      "source": {
+        "type": "source",
+        "name": "ocr_output/2504.00105v1/output.md",
+        "authors": [],
+        "date": "2025-04-02T17:26:31.759970"
+      }
+    }
+  ]
+}
