@@ -1,0 +1,1013 @@
+Quantum effects and temperature dependence of the free energy
+barrier and shear frequency in bilayer graphene
+Jean Paul Nery,1, 2, 3, ∗Lorenzo Monacelli,1and Francesco Mauri1, 2,†
+1Dipartimento di Fisica, Universit` a di Roma La Sapienza, I-00185 Roma, Italy
+2Graphene Labs, Fondazione Istituto Italiano di Tecnologia, Via Morego, I-16163 Genova, Italy
+3Nanomat group, QMAT research unit, and European Theoretical Spectroscopy Facility,
+Universit´ e de Li` ege, B5a all´ ee du 6 aoˆ ut, 19, B-4000 Li` ege, Belgium
+Little is known about the quantum effects of friction, and first-principles studies are virtually
+non-existent. In multilayer graphene, the order of the stacking of the layers plays a crucial role in
+the electronic properties and the manifestation of superconductivity, and friction affects how layers
+slide to change the stacking. Here, we study the effects of friction in bilayer graphene by focusing on
+quantum fluctuations in the free energy barrier that layers have to overcome to slide with respect to
+each other. We evaluate the free energy at the barrier in bilayer graphene through the self-consistent
+harmonic approximation, accounting for quantum and thermal ionic fluctuations, and obtain a very
+large reduction of the barrier of more than 30% at low temperatures. There is little temperature
+dependence up to about 500 K, but it increases at higher temperatures. Our approach is general
+and paves the way for systematically accounting for nuclear quantum and thermal effects in free
+energy barriers of other macroscopic systems.
+I. INTRODUCTION
+There has been intense research on graphene since
+its discovery in 2004, and also on multilayer graphene
+systems. Among many other interesting properties, flat
+bands are present in multilayer rhombohedral (ABC-
+stacked) graphene (RG)1, and in fact, superconductiv-
+ity has been observed in RG in 20212. Several works
+recently studied, both experimentally and theoretically,
+under which conditions RG can form3–8. In particu-
+lar, some of us unveiled how the stacking of graphene
+layers changes under shear stress9, and obtained that
+it produces many consecutive layers of RG. In fact, all
+samples with long-range RG that have been observed so
+far have been subject to some form of shear stress5,10–14,
+and thus of friction.
+To move graphene layers with respect to each other,
+they have to overcome a free energy barrier that sepa-
+rates different minima. When doing so, they experiment
+“stick-slip” motion: they move gradually with increas-
+ing shear stress, followed by sudden rearrangements and
+decrease of the stress15. The maximum shear-stress to
+“unlock” layers is correlated with the height of the bar-
+rier. Such barrier corresponds to the activation energy
+of a metastable state, where a graphene flake (from
+nanometers up to possibly micrometer scales) sitting on
+top of a large graphene layer is displaced relative to the
+equilibrium position. In clean samples with micrometer
+sized flakes however, different regions can have different
+stackings (AB and AC)12,16, and a domain wall in the
+metastable state separates both regions. The displace-
+ment of layers in this case is more complex and is not
+considered in our work.
+Superlubricity is another phenomenon present in sys-
+tems involving graphene layers or graphite that hasattracted a lot of attention17,18, in which the energy
+landscape corresponding to the relative displacement of
+graphene layers is also central. Yet another phenom-
+ena involving sliding surfaces is thermolubricity, which
+refers to the assistance from thermal excitations to over-
+come barriers. This term has been coined by some
+works that have studied the transition from stick-slip
+motion into stochastic fluctuations in friction at suffi-
+ciently high temperatures19. A few works have studied
+how quantum effects, including zero-point renormaliza-
+tion (ZPR) and tunneling, affect the free-energy barrier
+of dissociative adsorption20and diffusion21–23of hydro-
+gen. However, there are no studies of the quantum ef-
+fects and temperature dependence of free-energy barri-
+ers in macroscopic systems.
+A quantity closely related to the free energy barrier
+is the shear frequency, corresponding to the mode in
+which layers move rigidly in-plane and out of phase
+around the equilibrium position. The free energy bar-
+rier separates two equivalent minima, so the barrier and
+shear frequency are expected to have a similar tem-
+perature dependence (a lower curvature at the min-
+ima corresponds to a lower shear frequency and a lower
+free energy, at least close to the minima). The value
+of the shear frequency in graphite is a relatively well-
+established quantity, with experimental values24oscil-
+lating between 42 - 45 cm−1, using for example in-
+elastic X-ray scattering25, neutron-coherent inelastic
+scattering26, Raman spectra27,28, and coherent phonon
+spectroscopy29. In bilayer graphene, there are some ex-
+periments with values around 30 cm−1; for example, 28
+±3 cm−1in Refs. 29 and 30, and 32 cm−1in Ref. 27.
+The temperature dependence of the shear modes, how-
+ever, has been barely studied. Few experiments measure
+the temperature dependence of the shear mode, using
+Raman scattering in folded 2+2 (4 layer) graphene31,arXiv:2407.04532v2  [cond-mat.mes-hall]  4 Apr 20252
+or femtosecond pump-probe spectroscopy in graphite32.
+Another aspect of multilayer graphene and graphite
+that still needs further investigation and that serves
+as a consistency check on the adequacy of our ap-
+proach is thermal expansion (TE). Ref. 33 mea-
+sured it in bilayer and trilayer graphene for the first
+time. Ref. 34 uses the quasi-harmonic approxmima-
+tion (QHA), which underestimates the out-of-plane TE
+at low temperatures35and has a very rapid increase
+at high temperatures; in-plane, it also underestimates
+the TE at low temperatures35and overestimates it at
+high temperatures36. Much better out-of-plane results
+were obtained by using path integral molecular dynam-
+ics (PIMD)37, but while the TE flattens at 500 K in
+graphite, experimental values continue increasing36,38.
+However, in-plane PIMD results of Ref. 37 vastly over-
+estimate the TE.
+Motivated by the aforementioned phenomena, espe-
+cially by the lack of understanding of quantum effects
+in friction, we focus on studying the ZPR and temper-
+ature effects of the free-energy barrier. This is a very
+challenging problem due to the difficulty of determin-
+ing the free energy in a non-equilibrium position. Here
+we tackle it using the state-of-the-art stochastic self-
+consistent harmonic approximation (SSCHA)39. First,
+in Sec.II, we briefly introduce SSCHA and the QHA,
+and explain how is the barrier determined. Then, in
+Sec. III, we present our main results and compare to
+the height of the barrier with fixed atoms. Subsequently,
+using also the QHA, we calculate the temperature de-
+pendence of the shear frequency and compare to the lim-
+ited experimental data available. Finally, we determine
+the in-plane and out-of-plane TE coefficient in bilayer
+graphene and graphite, and compare our results to pre-
+vious theoretical and experimental work. In Sec. IV, we
+summarize the conclusions of our work.
+II. THEORETICAL AND COMPUTATIONAL
+FRAMEWORK
+Here, we briefly describe the QHA, SSCHA, and a
+new SSCHA interpolation method used to determine the
+barrier. We also introduce the equation that is used to
+fit SSCHA thermal expansion results. A more detailed
+description of SSCHA can be found in Refs. 40 or 39.
+A. Quasi-harmonic approximation (QHA)
+In the QHA, at each value of the lattice parameters
+{ai}, the free energy F(T,{ai}) =U({ai})−TS(T,{ai})
+is given by the standard harmonic expression. That is,F(T,{ai}) =Ulat({ai}) +1
+NX
+qν1
+2ℏωqν({ai})+
++1
+NX
+qνkTln
+1−e−ℏωqν({ai})/kT
+.
+(1)
+The value of the lattice parameters at a given temper-
+ature, ai(T), is determined by minimizing the free en-
+ergy. Using an interatomic potential, the phonon fre-
+quencies at each value of the lattice parameters can be
+determined with little computational effort, and thus
+the QHA offers a quick method to determine the lattice
+expansion. Using first-principles calculations, phonons
+can be determined using density functional perturba-
+tion theory (DFPT), which uses a primitive cell and is
+much faster than frozen phonon (finite differences) cal-
+culations in supercells. However, it does not account
+for the “true anharmonicity”41, present at fixed values
+of the parameters when varying temperature. For ex-
+ample, it gives an increasing as opposed to decreasing
+temperature dependence of the G mode in graphene,
+due to the negative TE of the lattice parameter. Also,
+if the TE is negative and the lattice parameter reduces
+below the classical lattice value, as in the case of mono-
+layer graphene at about 400 K (see later Fig. A10), then
+an acoustic mode becomes unstable and the QHA is ill-
+defined. These issues are not present in SSCHA.
+B. Stochastic self-consistent harmonic
+approximation (SSCHA)
+In general, the free-energy of a ionic Hamiltonian H=
+T+Vis given by
+FH= tr( ρHH) +1
+βtr(ρHlnρH), (2)
+where ρHis the density matrix. In SSCHA, the density
+matrix is restricted to a trial harmonic Hamiltonian H=
+T+V, and the free energy is given by
+FH(H) = tr( ρHH) +1
+βtr(ρHlnρH). (3)
+Due to a variational principle, FH≤ F H(H). The
+parameters of the harmonic Hamiltonian Hinclude the
+centroids of the atoms, which correspond to the lattice
+parameters aiof the QHA, but it also includes the in-
+teratomic force constant matrix, which contains the in-
+formation of all the phonon frequencies and accounts
+for the true anharmonicities. Thus, SSCHA has addi-
+tional parameters, and is expected in general to give3
+better results than QHA. Also, QHA does not satisfy a
+variational principle. It can be shown that
+FH(H) =FH+Z
+dR[V(R)− V(R)]ρH(R),(4)
+where Rindicates a general ionic configuration and
+ρH(R) =⟨R|e−βH|R⟩/ZHis the probability density of
+finding the crystal in a generic configuration R(ZH=
+tr[e−βH] is the partition function). By stochastically
+sampling configurations Rfor a given density matrix
+ρH, and determining the gradient of the free energy
+with respect the harmonic parameters (centroids and
+force constant matrix elements), the free energy can be
+minimized self-consistently. Thanks to the variational
+ansatz, the SSCHA quantum free energy is rigorously
+defined, even in out-of-equilibrium and unstable config-
+urations like SP. Notably, on the other hand, the QHA
+cannot determine the barrier, since the harmonic fre-
+quencies are not well defined at SP.
+The logarithm term in the harmonic term Eq. (1) can
+be hard to converge for low frequencies. Separating the
+total free energy as in Eq. (4) allows to interpolate the
+auxiliary harmonic term up to a very fine q-mesh, which
+is fundamental to avoid oversampling the energy of the
+long-ranged shear modes, while the anharmonic contri-
+bution can be properly converged already with small
+simulation cells. So rather than calculating FHdirectly
+with the grid corresponding to the SC used in the min-
+imization procedure, the force constant matrix can be
+Fourier interpolated in the usual way, and FHcan be
+calculated using a dense mesh.
+This procedure is followed both at SP and the equi-
+librium position, and the barrier is obtained by taking
+the difference of the corresponding free energies. More
+technical details are provided in the Appendix, Sec. A1.
+The SSCHA frequencies are in principle auxiliary fre-
+quencies that minimize the free energy. In a purely
+harmonic system, such frequencies correspond to the
+physical frequencies. But in general, they have to be
+corrected with the so-called “bubble correction” (and
+also an additional higher order term in very anharmonic
+cases)39, which we do in Sec. III B to obtain the temper-
+ature dependence of the shear frequency. Convergence
+with the supercell size of both the physical and auxiliary
+frequencies can be seen in the Appendix, Fig. A5.
+C. Thermal expansion (TE)
+As opposed to the barrier, the thermal expansion
+(TE) can also be calculated using the QHA, which al-
+though is much faster, is also in principle less accurate.
+With both QHA and SSCHA we determine the in-plane
+and out-of-plane lattice parameters as a function of tem-
+perature, a(T) and c(T), to then determine the in-planeand out-of-plane coefficients of TE, αa(T) =1
+ada
+dTand
+αc(T) =1
+cdc
+dT. In the QHA case, the TE can calcu-
+lated quickly and accurately for many temperatures, so
+we just use finite differences. For SSCHA, to reduce
+numerical error, we use Eq. (6) of Ref. 42,
+b(T) =b0expXθ
+eX/T−1
+, (5)
+which depends on parameters b0,Xandθ, to fit a(T)
+andcd(T) (bcan be aorcd). Then we determine the
+coefficients of TE from the derivative of the fit.
+III. RESULTS
+A. Barrier
+We first focus on studying bilayer graphene, where
+the in-plane and (most importantly) out-of-plane inter-
+actions are given by the interatomic potential of Ref. 43
+and Ref. 44, respectively. The out-of-plane interactions
+determine the barrier. The energy profile of a layer mov-
+ing with respect to the other one along the bond direc-
+tion is given by Fig. 1, which gives good reults when
+comparing to theory and experiment (see Table I).
+TABLE I. Comparison of the barrier VSPand the shear fre-
+quency at fixed ionic positions (classical at T= 0 K) between
+the interatomic potential we used in this work43,44, LDA,
+and theoretical calculations and experiments from previous
+works. The values are a little bit lower but close to that of
+adiabatic-connection fluctuation-dissipation theorem within
+the random phase approximation (ACFDT-RPA)45and ex-
+perimental data24.
+2 layers
+This work2 layers
+LDAPrevious
+works
+Small barrier VSP
+(meV/atom)1.24 1.58 1.53 (RPA)45
+Shear frequency
+(cm−1) (bulk)37 42 42-4524
+The lower layer is fixed in position A, and there are
+two minima of the same energy, AB and AC, at a dis-
+tance of a bond length d= 1.42˚A. For layers to slide
+with respect to each other, they have to overcome a bar-
+rierVSP. SP is a saddle point in the full energy land-
+scape, so the shear mode in the perpendicular direction
+(along the direction of two nearby AA maxima) is sta-
+ble. In order to determine the ZPR and temperature
+dependence of the barrier, we use SSCHA to determine
+the free energy at the equilibrium position and SP, using
+the interpolation method described in Sec. II B.4
+AA AB SP AC AA012345678Energy (meV/atom)
+VSP
+FIG. 1. Energy profile of bilayer graphene when moving one
+layer relative to the other along the bond direction. The
+lower layer is fixed in position A. Configuration AA (one
+layer on top of each other) is the least favorable configura-
+tion. There are two minima of the same energy, AB and
+AC, which correspond to the two stable configurations. To
+go from one minima to the other one applying shear stress,
+the upper layer has to overcome the barrier VSP, which has
+a value of 1.24 meV/atom relative to the minima. The dia-
+grams below illustrate the different configurations, with the
+upper layer (darker blue) moving relative to the lower one
+in position A (lighter blue).
+The barrier as a function of temperature can be seen
+in Fig. 2. The barrier is reduced by an outstanding 35%
+with respect to the value at fixed nuclei. Classically,
+ionic vibrations reduce at low temperatures (and are ex-
+actly 0 at T= 0 K), so it might be expected that such
+reduction is due to quantum fluctuations. However, the
+shear modes, which play a significant role in the reduc-
+tion, have very low frequencies, around 25 cm−1∼35
+K (given by the curvature around AB in Fig. 1). So, at
+100 K, they are still well activated and behave virtually
+in a classical way. In fact, almost all of the contribution
+to the barrier at 100 K comes from the anharmonic term
+in Eq. (4), as opposed to the quantum fluctuations in
+the harmonic piece.
+To confirm that quantum fluctuations are very minor
+down to 100 K, we performed SSCHA calculations in the
+classical limit ℏω/kT →0 (which recovers the classical
+Boltzmann distribution for the distorted configurations)
+at 100 K and 300 K. We obtained comparable results,
+except for a small difference of less than 0.05 meV/atom
+at 100 K with respect to the quantum values. Much
+lower temperatures would have to be considered to re-
+cover the classical value at fixed ions. Thus, it is the
+anharmonic vibrations that play a decisive role in the
+ability of layers to slide with respect to each other.
+In a previous work9, using density functional theory
+with an LDA functional (see Table 1), some of us ob-
+tained that the maximum shear stress in simulated stick-
+0 200 400 600 800 1000
+T emperature (K)0.60.70.80.91.01.11.21.3Barrier (meV/atom)
+35% reduction
+SSCHA
+Fixed atoms(a)
+FIG. 2. Barrier as a function of temperature. It is re-
+duced from 1.24 meV/atom, the value at fixed nuclei (V SP
+in Fig. 1), to about 0.8 meV/atom, corresponding to a large
+reduction of about 35% due to anharmonicities. The barrier
+does not change much up to about 500 K, but the value at
+1000 K is about 20% smaller relative to the value at 100 K.
+The lines are a guide to the eye, as in the other figures of
+this work.
+slip motion is 0.2 GPa, and we mentioned a good agree-
+ment with experimental values 0.14 GPa (Ref. 15) and
+0.1 GPa (Ref. 46). Assuming the maximum shear stress
+decreases by 35% just like the barrier, we obtain 0.13
+GPa, in excellent agreement with experiments.
+Other systems involving hydrogen diffusion across a
+free energy barrier do present significant differences be-
+tween classical and quantum free energy barriers due
+to the large quantum fluctuations of hydrogen. Such
+differences have been observed at 100 K (Ref. 20), 250
+K (Ref. 22), and even higher temperatures21, although
+other works23obtain very similar barriers at already 200
+K.
+Regarding the evolution of the barrier as the tem-
+perature increases, there is a weak dependence up to
+about 500 K, since the barrier remains close to around
+0.8 meV/atom. However, when temperature increases
+up to 1000 K, the barrier is further reduced by 20%
+relative to the value at 100 K. Thus, high temperatures
+should help to reduce (static) friction between layers. In
+particular, it could aid the production of ABC-stacked
+multilayer graphene from its more common AB-stacked
+version through shear stress, as mentioned in the Intro-
+duction. More in general, high temperatures could also
+help engineer specific stacking arrangements in other
+layered materials.
+B. Shear frequency
+At the equilibrium position, one of the vibrational
+modes at Γ is the shear mode in both directions of the
+plane (doubly degenerate, see Fig. 3). Its temperature5
+dependence can be determined using both SSCHA and
+QHA. In the QHA, the TE is obtained by determining
+the lattice parameters that minimize the free energy at
+each temperature.
+The third out of phase mode of the layers is the
+breathing mode, in the out-of-plane direction. A dis-
+cussion of its temperature dependence can be found in
+the Appendix.
+The temperature dependence of the shear frequency
+can be seen in Fig. 4. The quantum effects evaluated
+within the SSCHA harden the shear frequency energy
+at low temperatures compared with the classical value
+at 0 K (dashed line). On the other hand, the ZPR
+in QHA softens the shear frequency. The temperature
+dependence of the shear mode is similar to that of the
+barrier, varying by about 20% from 0 to 1000 K, and
+having a larger dependence at temperatures above 500
+K.
+M K
+02004006008001000120014001600Frequency (cm1)
+M/14020406080100
+SB
+FIG. 3. Bilayer graphene phonon dispersion. The inset
+shows a zoom in close to Γ to better visualize the doubly
+degenerate shear modes Sat Γ, and the breathing mode B.
+Due to the high speed velocity in graphene, the region of
+the shear mode in the BZ is small (a fraction of ΓM), and is
+overrepresented in small supercell calculations. The breath-
+ing mode, on the other hand, is flat, so nearby sampling
+points are not necessary to converge the free energy.
+Regarding the experimental data, in Ref. 31, the mea-
+surements are done in 2+2 folded graphene (4 layers).
+In order to compare with our 2-layer calculations, we
+multiply by a correction factor using a nearest-neighbor
+model for layers47. In the case of bulk, such a factor
+is√
+2 (the force exerted by a layer below and above,
+proportional to the square of the frequency, is doubled
+when considering only nearest neighbor interactions),
+which we use to compare to the bulk measurements of
+Ref. 32. The temperature dependence of both SSCHA
+and QHA curves is similar to the experimental adjusted
+bulk values. Folded graphene values have a steeper de-
+pendence but are likely unsuitable for comparison, be-
+cause layers fold with different rotational angles, while
+0 200 400 600 800 1000
+T emperature (K)222324252627Shear freq. (cm1)
+Bilayer
+SSCHA
+QHA
+Mishina 2000 bulk corr.
+Cong 2014 folded corr.
+Fixed atomsFIG. 4. Shear frequency as a function of temperature using
+SSCHA (blue circles) and QHA (red crosses). There is no ex-
+perimental data for the temperature dependence of the shear
+frequency as a function of temperature for bilayer graphene.
+Experimental values correspond to bulk (blue crosses) and
+folded 2+2 graphene (orange circles), which are corrected by
+the factor of a nearest neighbor model47to compare to the
+bilayer case (and rigidly shifted by -5 cm−1to facilitate the
+visual comparison). The agreement with the temperature
+dependence of the bulk values is good.
+layers are aligned in standard graphite. The shear fre-
+quency has also been measured in other materials like
+bilayer NbSe 2in Ref. 47, or bulk h-BN in Ref. 48, which
+show a similar temperature dependence (adjusting the
+bulk value by a√
+2 factor) of roughly -0.5 cm−1/100 K.
+C. Thermal expansion
+To further check the adequacy of our method (the use
+of SSCHA with the in-plane43and out-of-plane44inter-
+atomic potentials), we look at the TE in the previous
+calculations and also in bulk graphite, and compare to
+experiments.
+In Fig. 5, we show the TE coefficient calculated with
+SSCHA and QHA in bulk, compared with experimental
+data35,38and PIMD calculations37. SSCHA curves re-
+sult from fitting Eq. (5) to a(T) and c(T) (see Fig. A8)
+and then taking the derivative. SSCHA results underes-
+timate the thermal expansion. PIMD results are over-
+all very good, although they also give values somewhat
+lower than experiments35,38.
+In-plane SSCHA calculations give excellent results.
+QHA works well at low temperatures but departs from
+experiments at higher temperatures. PIMD calculations
+of Ref. 37, although they work very well out-of-plane,
+greatly overestimate in-plane TE, presumably due to
+the inadequacy of their interatomic potential. It would
+be interesting in future work to compare SSCHA and
+PIMD using the same potentials.6
+0 200 400 600 800 1000 1200
+T emperature (K)051015202530c (106 K1)
+Bailey 1970
+PIMD bulk Herr. 2020
+Marsden exp. fit
+QHA bulk
+SSCHA bulk
+(a)
+0 200 400 600 800 1000
+T emperature (K)3.0
+2.5
+2.0
+1.5
+1.0
+0.5
+0.00.51.0a (106 K1)
+QHA bulk
+SSCHA bulk
+Entwisle 1962
+Bailey 1962
+PIMD, Herrero 2020
+(b)
+FIG. 5. (a) Graphite out-of-plane coefficient of thermal
+expansion as a function of temperature using SSCHA and
+QHA. PIMD calculations37and experimental data35are also
+included. PIMD overall agrees well, while QHA and SSCHA
+(with the potential of Ref. 44) underestimates the TE. (b)
+Graphite in-plane coefficient of thermal expansion using SS-
+CHA and QHA. QHA again underestimates the dependence
+at low temperatures, and also at high temperatures. On the
+other hand, PIMD gives a dependence that is surprisingly
+very far from experimental values. SSCHA gives excellent
+results both at low and high temperatures, considering also
+the disagreement within experimental data.
+IV. CONCLUSIONS
+To conclude, we demonstrated that anharmonicities
+are fundamental to determining properties of layered
+materials that account for friction. Using the self-
+consistent harmonic approximation, which can calculate
+the quantum free energy at unstable configurations, and
+a novel interpolation method, we unveiled the suppres-
+sion of the barrier separating stable configurations in
+bilayer graphene. Anharmonicities reduce the free en-
+ergy barrier by 35%, and gets further reduced at high
+temperatures. On the other hand, quantum fluctuations
+are not important down to 100 K. The shear modes,
+which occupy a small region of phase space, have to be
+adequately sampled to correctly determine the free en-
+ergy barrier as well as the thermal expansion. Althoughour approach underestimates the out-of-plane thermal
+expansion compared with experimental values, in-plane
+agreement with experiments is excellent. We also ob-
+tained that the temperature dependence of the barrier
+is similar to that of the shear frequency, which agrees
+well with existing measurements.
+ACKNOWLEDGMENTS
+This work has received funding from the European
+Union’s Horizon 2020 research and innovation pro-
+gramme under Grant Agreement No. 881603, and from
+the MORE-TEM ERC-SYN project, Grant Agreement
+No. 951215. J.P.N. is currently supported by the Euro-
+pean Union under a Marie Sk lodowska-Curie Individual
+Fellowship, Project GreenNP No. 101151380.
+APPENDIX
+A1. Barrier
+To determine the barrier, the free energy has to be
+determined at the equilibrium position and SP. At the
+equilibrium position, there are two shear modes, indi-
+cated with Sin Fig. 3(b). The mode perpendicular
+to the bond direction shown in Fig. 1 is stable in SP,
+while the shear mode along the reaction coordinate (us-
+ing the language of chemical reactions) is unstable. As
+opposed to the breathing mode, that is flat around Γ,
+the shear modes are only present in a small region of
+the BZ (1 /N2, with Nlarger than 20), as a result of the
+large speed of sound in graphene. So in small supercells,
+the shear modes will be over-represented. This is more
+problematic at SP, where the SSCHA frequency corre-
+sponding to she unstable mode takes very small values
+(see Fig. A1), which makes the convergence of the free
+energy hard, mostly due to the logarithm term in FHin
+Eq. (4). Just determining the barrier with this equation
+and a N×N×1 supercell, results in Fig. A2, which is
+not well converged.
+In order to get better convergence, we use the in-
+terpolation method mentioned in Sec. II B, and obtain
+a much more stable barrier as a function of 1 /N(see
+Fig. A3). The 40 ×40 interpolation grid used for FH
+corresponds to a supercell of 6400 atoms. For 100, 200
+and 300 K, the barrier seems well converged. For a 1000
+K, the trend seems to indicate convergence within 0.02
+meV/atom, so for the intermediate temperatures 400
+and 500 K, the barrier is likely also converged within a
+similar error, resulting in Fig. 2 of the main text.
+To better understand the reduction in the barrier, we
+show in Fig. A4 the SSCHA frequencies (around the
+shear modes) at equilibrium and SP at T= 100 K.
+The SSCHA frequencies at equilibrium are similar to the7
+standard harmonic values, as shown in the main text.
+The SSCHA shear frequencies at SP instead change sig-
+nificantly. The shear mode that looks like an acous-
+tic mode takes a value of about 2 cm−1at Γ (see also
+Fig. A1). The rest of the SSCHA phonon dispersion
+presents small differences between equilibrium and SP
+frequencies.
+0.050 0.075 0.100 0.125 0.150 0.175 0.200 0.225 0.250
+1/N0246810Shear frequency (cm1)
+T=100K
+T=200K
+T=300K
+T=400K
+T=500K
+T=1000K
+FIG. A1. Unstable shear frequency at SP as a function of
+1/N, for different temperatures. The fact that it does not
+stabilize shows that the shear mode is present in a small
+region of the BZ.
+200 400 600 800 1000
+T emperature (K)0.00.10.20.30.40.50.60.70.8Barrier (meV/atom)
+N=6
+N=8
+N=10
+N=12
+FIG. A2. Barrier as a function of temperature, for differ-
+ent supercells, just using the N×N×1 grid to determine
+the harmonic part of the free energy Eq. (4). The barrier
+changes significantly with N, which means the shear mode is
+overrepresented. On the other hand, interpolating the har-
+monic part of the free energy, convergence is much better.
+See Fig. A3.
+A2. Shear and breathing frequency
+The SSCHA auxiliary and physical frequencies as a
+function of temperature can be observed in Fig. A5.
+The frequencies are not fully converged, and the con-
+0.08 0.10 0.12 0.14 0.16
+1/N0.400.450.500.550.600.650.700.750.80Barrier (meV/atom)
+T=100K
+T=200K
+T=300K
+T=400K
+T=500K
+T=1000KFIG. A3. Barrier as a function of 1 /N, for different tempera-
+tures, interpolating the first term of Eq. 4. The barrier seems
+well converged at low temperatures and harder to converge
+at higher temperatures. Values are likely converged within
+less than 0.05 meV/atom.
+M/14020406080100Frequency (cm1)
+SSCHA SP
+SSCHA Eq.
+FIG. A4. SSCHA frequencies around the shear modes, at
+the equilibrium position (blue) and SP (red).
+verged value might be similar to the QHA. The bulk
+temperature dependence (corrected with the factor of
+the nearest neighbor model) agrees very well with QHA.
+The other mode at Γ that involves the layers mov-
+ing out of phase is the breathing mode (out-of-plane
+instead of in-plane). Its temperature dependence can
+be seen in Fig. A6. It decreases more at low tempera-
+tures compared to the shear mode and barrier. There
+are no measurements of the breathing mode as a func-
+tion of temperature, so our calculations serve as a pre-
+diction. The SSCHA curve is very well converged, so
+we expect it to have a temperature dependence that
+is closer to the experiment relative to the QHA curve.
+The auxiliary frequency for N= 8 and 10 is almost
+the same (Fig. A7), so the physical values are also con-
+verged (within 0.5 cm−1at 1000 K, and less for lower
+temperatures).8
+0 200 400 600 800 1000
+Temperature (K)1820222426Frequency (cm1)
+Auxiliary N=4
+Physical N=4
+Auxiliary N=6
+Physical N=6
+Auxiliary N=8
+Physical N=8
+Auxiliary N=10
+Physical N=10
+Auxiliary N=12
+QHA
+Cong folded corr.
+Mishina bulk corr.
+FIG. A5. Shear frequency as a function of temperature,
+both for the physical frequency (full lines) and the auxil-
+iary one (dashed). The experimental value is shifted and
+included twice, to facilitate the comparison of the temper-
+ature dependence with the QHA and SSCHA curves. The
+agreement of the experimental bulk value (adjusted with the
+nearest neighbor model to the bilayer case) with QHA is ex-
+cellent, and with SSCHA is very good as well.
+0 200 400 600 800 1000
+Temperature (K)646668707274767880Breathing freq. (cm1)
+SSCHA
+QHA
+FIG. A6. Breathing frequency as a function of temperature
+using SSCHA (black circles) and QHA (red crosses). The
+SSCHA calculations are well converged and serve as a pre-
+diction, since there is no experimental data in the literature.
+A3. Thermal expansion (TE)
+For the SSCHA out-of-plane TE calculations, we also
+used the interpolation scheme with a 40 ×40 grid. The
+interlayer distance and in-plane lattice parameter ob-
+tained in bulk with SSCHA can be seen in Fig. A8. The
+derivative of these fits results in the SSCHA curves of
+Fig. 5.
+In Fig. A9 we compare SSCHA and QHA for bilayer
+graphene and bulk. The TE for both SSCHA and QHA
+bulk is lower relative to bilayer. In-plane, Fig. A10,
+we can also see a clear reduction of the TE coefficient
+from monolayer to bulk. In what follows, we describe in
+detail convergence studies we did for SSCHA, and also
+0 200 400 600 800 1000
+Temperature (K)707274767880Frequency (cm1)
+Auxiliary N=4
+Physical N=4
+Auxiliary N=6
+Physical N=6
+Auxiliary N=8
+Physical N=8
+Auxiliary N=10
+Physical N=10FIG. A7. Convergence of the auxiliary (dashed) and physical
+(full) breathing frequency. The physical frequency is well-
+converged at N= 10.
+0 200 400 600 800 1000
+T emperature (K)3.453.463.473.483.493.503.513.52cd (Å)SSCHA, bulk
+SSCHA
+Fit
+(a)
+0 200 400 600 800 1000
+T emperature (K)2.47052.47102.47152.4720a (Å)SSCHA, bulk
+SSCHA
+Fit (b)
+FIG. A8. Out-of plane (a) and in-plane (b) SSCHA thermal
+expansion (blue dots). The fit corresponds to Eq. (5).
+for QHA calculations.
+a. Bilayer
+QHA. We first considered the out-of-plane TE by fix-
+inga, and then we considered the full minimization of
+0 200 400 600 800
+T emperature (K)05101520253035c (106 K1)
+SSCHA bilayer
+QHA bilayer
+SSCHA bulk
+QHA bulk
+FIG. A9. SSCHA and QHA out-of-plane coefficient of TE
+for graphite and bilayer graphene.9
+0 200 400 600 800 1000
+T emperature (K)2.5
+2.0
+1.5
+1.0
+0.5
+0.00.5a (106 K1)
+SSCHA mono
+SSCHA bi
+SSCHA bulk
+QHA mono
+QHA bi
+QHA bulk
+FIG. A10. In-plane coefficient of TE using SSCHA and
+QHA, for monolayer, bilayer and bulk.
+the free energy by varying both aandcd. In Fig. A11
+we can see cd(T) both for fixed a, and for the full min-
+imization. The full minimization has a slightly larger
+dependence with temperature, but fixing ais a good
+approximation. Fig. A12 is analogous for a(T), with
+a fixed value cd= 3.5˚A. The curves are very similar,
+except for a small difference at high temperatures (of
+about 0.0005 ˚A at 1000 K).
+We also studied convergence with the size of the grid
+(Fig. A13). At N= 12, cd(T) is well converged (within
+0.005 ˚A at 1000 K), although N∼20 to achieve full
+convergence. The shear mode increases thermal expan-
+sion because when layers are displaced relative to each
+other, the interlayer distance is larger (see Fig. A14).
+In-plane, a larger Nof about 50 is needed to fully
+achieve convergence (Fig. A15).
+SSCHA. Out-of-plane convergence is similar to the
+QHA case. So N= 12 should give a good curve for
+cd(T). We also see in SSCHA a similar variation of cd
+when changing a(compare Figs. A11 and A18).
+On the other hand, a(T) has less variation with tem-
+perature relative to QHA and is already converged at
+about N= 8 (Fig. A17).
+b. Bulk
+QHA. In bulk, there is virtually no difference for the
+out-of-plane TE when fixing a, or considering also the
+minimization of a(Fig. A19).
+In-plane (Fig. A20), there is a small difference be-
+tween both fixing or varying a, similar to the bilayer
+case.
+SSCHA. Here we also used the interpolation method
+(40×40 grid), to go beyond the N= 8 supercell that
+was possible in the direct SSCHA calculation, resulting
+in the blue dots of Fig. A8 (a).
+In-plane, based on N= 8 already giving converged
+results in bilayer (Fig. A17), and also considering that
+the QHA convergence in bulk (Fig. A23) is much faster
+than in bilayer (Fig. A15), N= 8 should give converged
+0 200 400 600 800 1000
+Temperature (K)3.463.483.503.523.54cd(Å)QHA, bilayer
+Fixed a
+Full minimizationFIG. A11. Interlayer distance cdas a functi on of temper-
+ature in bilayer graphene using QHA, fixing the value of a
+(dashed-blue) and doing the full minimization (full-black).
+In-plane TE has little effect on the out-of-plane TE.
+0 200 400 600 800 1000
+T emperature (K)2.4682.4692.4702.4712.472a (Å)QHA, bilayer
+Fixed c
+Full minimization
+FIG. A12. Lattice parameter aas a function of tempera-
+ture in bilayer graphene using QHA, fixing the value of cd
+(dashed-blue) and doing the full minimization (full-black).
+In-plane TE has little effect on the out-of-plane TE.
+SSCHA results in bulk, which corresponds to the blue
+dots in Fig. A8 (b).10
+0 2 4 6 8 10
+Temperature (K)3.4503.4753.5003.5253.5503.5753.600cd(Å)QHA, bilayer
+N=4
+N=6
+N=8
+N=12
+N=20
+N=50
+FIG. A13. Interlayer distance as a function of temperture
+in bilayer graphene, using QHA. At N∼20cdis converged,
+although N= 12 also gives a good result.
+AA AB SP AC AA3.4503.4753.5003.5253.5503.5753.6003.625cd (Å)
+FIG. A14. Interlayer distance profile along the bond direc-
+tion, when moving a graphene layer relative to another one
+(analogous to Fig. 1, but for distance instead of energy). The
+minimum distance is at the equilibrium positions.
+0 2 4 6 8 10
+Temperature (K)2.4682.4692.4702.4712.472a(Å)QHA, bilayer
+N=4
+N=8
+N=12
+N=20
+N=50
+N=200
+FIG. A15. In-plane lattice parameter as a function of tem-
+perature in bilayer graphene for different Nusing QHA. A
+largeNis needed to achieve convergence.
+0 200 400 600 800 1000
+Temperature (K)3.463.483.503.523.54cd(Å)
+SSCHA, bilayer
+N=4
+N=6
+N=8
+N=10
+N=12FIG. A16. Interlayer distance as a function of temperature in
+bilayer graphene for different Nusing SSCHA. Convergence
+is similar to the QHA case, Fig. A13, where N= 12 gives a
+good value of cd(T).
+0 200 400 600 800 1000
+Temperature (K)2.47102.47152.47202.4725a (Å)
+SSCHA, bilayer
+N=4
+N=6
+N=8
+N=10
+FIG. A17. In-plane lattice parameter as a function of tem-
+perature, for different N. AtN= 8 the curve is already well
+converged.
+0 200 400 600 800 1000
+Temperature (K)3.463.483.503.523.54cd (Å)SSCHA, bilayer
+a=2.471 Å
+a=2.473 Å
+FIG. A18. Interlayer distance as a function of temperature
+in bilayer graphene, using SSCHA, at two different values
+of the in-plane lattice parameter. The curves are similar to
+the ones of Fig. A11. In-plane TE has little effect on the
+out-of-plane TE.11
+0 200 400 600 800 1000
+Temperature (K)3.463.483.503.52cd(Å)QHA,bulk
+Fixed a
+Full minimization
+FIG. A19. Interlayer distance as a function of temperature
+in bulk using QHA, fixing the value of cd(dashed-blue) and
+doing the full minimization (full-black). In-plane TE has
+barely no effect on the out-of-plane TE.
+0 200 400 600 800 1000
+T emperature (K)2.46902.46952.47002.47052.47102.4715a(Å)QHA, bulk
+Fixed c
+Full minimization
+FIG. A20. In-plane lattice parameter as a function of tem-
+perature in bulk using QHA, fixing the value of cd(dashed-
+blue) and doing the full minimization (full-black). The out-
+of-plane TE has a slightly larger but similar effect relative
+to bilayer on the in-plane TE.
+0 2 4 6 8 10
+Temperature (K)3.463.483.503.523.543.563.583.60cd(Å)QHA, bulk
+N=4
+N=6
+N=8
+N=12
+N=20
+N=50
+FIG. A21. Interlayer distance as a function of temperature in
+graphite for different Nusing QHA. Convergence is similar
+to the bilayer case.
+0 2 4 6 8 10
+Temperature (K)3.453.463.473.483.493.503.513.523.53cd(Å)QHA, bulk
+Nz=1
+Nz=2
+Nz=4
+Nz=8FIG. A22. Interlayer distance as a function of temperature
+in graphite for different Nz.Nz= 2 is the value used in our
+calculations.
+0 200 400 600 800 1000
+Temperature (K)2.46952.47002.47052.47102.4715a(Å)QHA, bulk
+N=4
+N=6
+N=8
+N=10
+FIG. A23. In-plane lattice parameter as a function of tem-
+perature in graphite using QHA, for different N. AtN= 6
+convergence is already very good, as opposed to the bilayer
+case Fig. A16.12
+∗nery.jeanpaul@gmail.com
+†francesco.mauri@uniroma1.it
+1M. Koshino, Physical Review B 81(2010), 10.1103/phys-
+revb.81.125304.
+2H. Zhou, T. Xie, T. Taniguchi, K. Watanabe, and A. F.
+Young, Nature 598, 434 (2021).
+3M. Yankowitz, J. I.-J. Wang, A. G. Birdwell, Y.-A. Chen,
+K. Watanabe, T. Taniguchi, P. Jacquod, P. San-Jose,
+P. Jarillo-Herrero, and B. J. LeRoy, Nature Materials
+13, 786 (2014).
+4F. R. Geisenhof, F. Winterer, S. Wakolbinger, T. D.
+Gokus, Y. C. Durmaz, D. Priesack, J. Lenz, F. Keilmann,
+K. Watanabe, T. Taniguchi, R. Guerrero-Avil´ es, M. Pelc,
+A. Ayuela, and R. T. Weitz, ACS Applied Nano Materi-
+als2, 6067 (2019).
+5C. Bouhafs, S. Pezzini, N. Mishra, V. Miˇ seikis, Y. Niu,
+C. Struzzi, A. A. Zakharov, S. Forti, and C. Coletti,
+arXiv (2020).
+6Z. Gao, S. Wang, J. Berry, Q. Zhang, J. Gebhardt, W. M.
+Parkin, J. Avila, H. Yi, C. Chen, S. Hurtado-Parra,
+M. Drndi´ c, A. M. Rappe, D. J. Srolovitz, J. M. Kikkawa,
+Z. Luo, M. C. Asensio, F. Wang, and A. T. C. Johnson,
+Nature Communications 11(2020), 10.1038/s41467-019-
+14022-3.
+7H. Li, M. I. B. Utama, S. Wang, W. Zhao, S. Zhao,
+X. Xiao, Y. Jiang, L. Jiang, T. Taniguchi, K. Watan-
+abe, A. Weber-Bargioni, A. Zettl, and F. Wang, Nano
+Letters 20, 3106 (2020).
+8A. Kerelsky, C. Rubio-Verd´ u, L. Xian, D. M. Kennes,
+D. Halbertal, N. Finney, L. Song, S. Turkel, L. Wang,
+K. Watanabe, T. Taniguchi, J. Hone, C. Dean, D. N.
+Basov, A. Rubio, and A. N. Pasupathy, Proceed-
+ings of the National Academy of Sciences 118 (2021),
+10.1073/pnas.2017366118.
+9J. P. Nery, M. Calandra, and F. Mauri, Nano Letters 20,
+5017 (2020).
+10Q. Lin, T. Li, Z. Liu, Y. Song, L. He, Z. Hu, Q. Guo, and
+H. Ye, Carbon 50, 2369 (2012).
+11Y. Henni, H. P. O. Collado, K. Nogajewski, M. R. Molas,
+G. Usaj, C. A. Balseiro, M. Orlita, M. Potemski, and
+C. Faugeras, Nano Letters 16, 3710 (2016).
+12H. Henck, J. Avila, Z. B. Aziza, D. Pierucci, J. Baima,
+B. Pamuk, J. Chaste, D. Utt, M. Bartos, K. Nogajewski,
+B. A. Piot, M. Orlita, M. Potemski, M. Calandra, M. C.
+Asensio, F. Mauri, C. Faugeras, and A. Ouerghi, Physical
+Review B 97(2018), 10.1103/physrevb.97.245421.
+13Y. Yang, Y.-C. Zou, C. R. Woods, Y. Shi, J. Yin, S. Xu,
+S. Ozdemir, T. Taniguchi, K. Watanabe, A. K. Geim,
+K. S. Novoselov, S. J. Haigh, and A. Mishchenko, Nano
+Letters 19, 8526 (2019).
+14Y. Shi, S. Xu, Y. Yang, S. Slizovskiy, S. V. Morozov, S.-
+K. Son, S. Ozdemir, C. Mullan, J. Barrier, J. Yin, A. I.
+Berdyugin, B. A. Piot, T. Taniguchi, K. Watanabe, V. I.
+Fal’ko, K. S. Novoselov, A. K. Geim, and A. Mishchenko,
+Nature 584, 210 (2020).
+15Z. Liu, S.-M. Zhang, J.-R. Yang, J. Z. Liu, Y.-L. Yang,
+and Q.-S. Zheng, Acta Mechanica Sinica 28, 978–982
+(2012).
+16L. Jiang, S. Wang, Z. Shi, C. Jin, M. I. B. Utama, S. Zhao,Y.-R. Shen, H.-J. Gao, G. Zhang, and F. Wang, Nature
+Nanotechnology 13, 204–208 (2018).
+17Y. Liu, F. Grey, and Q. Zheng, Scientific Reports 4
+(2014), 10.1038/srep04875.
+18R. C. Sinclair, J. L. Suter, and P. V. Coveney, Advanced
+Materials 30, 1705791 (2018).
+19M. Z. Baykara, M. R. Vazirisereshk, and A. Martini,
+Applied Physics Reviews 5(2018), 10.1063/1.5051445.
+20G. Mills and H. J´ onsson, Physical Review Letters 72,
+1124 (1994).
+21A. Poma, M. Monteferrante, S. Bonella, and G. Ciccotti,
+Physical Chemistry Chemical Physics 14, 15458 (2012).
+22E. M. McIntosh, K. T. Wikfeldt, J. Ellis, A. Michaelides,
+and W. Allison, The Journal of Physical Chemistry Let-
+ters4, 1565 (2013).
+23J. R. Cendagorta, A. Powers, T. J. H. Hele, O. Marsalek,
+Z. Baˇ ci´ c, and M. E. Tuckerman, Physical Chemistry
+Chemical Physics 18, 32169 (2016).
+24I. V. Lebedeva, A. V. Lebedev, A. M. Popov, and
+A. A. Knizhnik, Computational Materials Science 128,
+45 (2017).
+25M. Mohr, J. Maultzsch, E. Dobardˇ zi´ c, S. Reich,
+I. Miloˇ sevi´ c, M. Damnjanovi´ c, A. Bosak, M. Krisch, and
+C. Thomsen, Physical Review B 76(2007), 10.1103/phys-
+revb.76.035439.
+26R. Nicklow, N. Wakabayashi, and H. G. Smith, Physical
+Review B 5, 4951 (1972).
+27P. H. Tan, W. P. Han, W. J. Zhao, Z. H. Wu, K. Chang,
+H. Wang, Y. F. Wang, N. Bonini, N. Marzari, N. Pugno,
+G. Savini, A. Lombardo, and A. C. Ferrari, Nature Ma-
+terials 11, 294 (2012).
+28M. Hanfland, H. Beister, and K. Syassen, Physical Re-
+view B 39, 12598 (1989).
+29D. Boschetto, L. Malard, C. H. Lui, K. F. Mak, Z. Li,
+H. Yan, and T. F. Heinz, Nano Letters 13, 4620 (2013).
+30M. H. S Amelinckx, P Delavignette, Chem. Phys. Carbon
+1(1965).
+31C. Cong and T. Yu, Nature communications 5, 1 (2014).
+32T. Mishina, K. Nitta, and Y. Masumoto, Physical Review
+B62, 2908 (2000).
+33G. A. McQuade, A. S. Plaut, A. Usher, and J. Martin,
+Applied Physics Letters 118, 203101 (2021).
+34R. Mittal, M. K. Gupta, B. Singh, S. Mishra, and S. L.
+Chaplot, Solid State Communications , 114324 (2021).
+35A. C. Bailey and B. Yates, Journal of Applied Physics
+41, 5088 (1970).
+36W. Morgan, Carbon 10, 73 (1972).
+37C. P. Herrero and R. Ram´ ırez, Physical Review B 101,
+035405 (2020).
+38B. Marsden, A. Mummery, and P. Mummery, Proceed-
+ings of the Royal Society A: Mathematical, Physical and
+Engineering Sciences 474, 20180075 (2018).
+39L. Monacelli, R. Bianco, M. Cherubini, M. Calandra,
+I. Errea, and F. Mauri, Journal of Physics: Condensed
+Matter 33, 363001 (2021).
+40I. Errea, M. Calandra, and F. Mauri, Physical Review B
+89(2014), 10.1103/physrevb.89.064302.
+41P. B. Allen, Modern Physics Letters B 34, 2050025
+(2019).13
+42J. E. Zorzi and C. A. Perottoni, Computational Materials
+Science 199, 110719 (2021).
+43F. Libbi, N. Bonini, and N. Marzari, 2D Materials 8,
+015026 (2020).
+44M. Wen, S. Carr, S. Fang, E. Kaxiras, and E. B.
+Tadmor, Physical Review B 98(2018), 10.1103/phys-
+revb.98.235404.
+45S. Zhou, J. Han, S. Dai, J. Sun, and D. J. Srolovitz, Phys-
+ical Review B 92(2015), 10.1103/physrevb.92.155438.
+46M. Dienwiebel, G. S. Verhoeven, N. Pradeep, J. W. M.Frenken, J. A. Heimberg, and H. W. Zandber-
+gen, Physical Review Letters 92(2004), 10.1103/phys-
+revlett.92.126101.
+47R. He, J. van Baren, J.-A. Yan, X. Xi, Z. Ye, G. Ye, I.-H.
+Lu, S. M. Leong, and C. H. Lui, 2D Materials 3, 031008
+(2016).
+48R. Cusc´ o, J. H. Edgar, S. Liu, G. Cassabois, B. Gil, and
+L. Art´ us, Physical Review B 99(2019), 10.1103/phys-
+revb.99.085428.
