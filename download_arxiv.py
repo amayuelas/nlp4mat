@@ -7,7 +7,7 @@ from tqdm import tqdm
 from datetime import datetime
 import requests
 import shutil
-
+import time
 def download_arxiv_pdfs_from_search(query: str, topic: str, year: Optional[int] = None, max_results: Optional[int] = None) -> None:
     """
     Download PDFs and metadata from arXiv using search query.
@@ -48,7 +48,7 @@ def download_arxiv_pdfs_from_search(query: str, topic: str, year: Optional[int] 
             try:
                 # Get the complete arXiv ID including version number
                 arxiv_id = result.entry_id.split('/')[-1]
-                if 'v1' in arxiv_id:
+                if 'v' in arxiv_id:
                     arxiv_id = arxiv_id.split('v')[0]
                 
                 # Create a folder for this paper
@@ -56,17 +56,14 @@ def download_arxiv_pdfs_from_search(query: str, topic: str, year: Optional[int] 
                 paper_folder.mkdir(exist_ok=True)
                 
                 # Use consistent filenames
-                pdf_filename = "pdf_article.pdf"
+                pdf_filename = "article.pdf"
                 json_filename = "metadata.json"
                 
                 # Update progress bar description
                 pbar.set_description(f"Downloading {arxiv_id}")
-
                 
                 # Save the PDF with verification
-                pdf_path = paper_folder 
-                print("here: ", result)
-                result.download_pdf()
+                result.download_pdf(dirpath=paper_folder, filename=pdf_filename)
                 
                 # Save metadata to JSON file
                 metadata = {
@@ -90,6 +87,7 @@ def download_arxiv_pdfs_from_search(query: str, topic: str, year: Optional[int] 
                 
                 pbar.write(f"Successfully downloaded: {arxiv_id}")
                 pbar.update(1)
+                time.sleep(1)
                 
             except Exception as e:
                 pbar.write(f"Error downloading {arxiv_id}: {str(e)}")
@@ -129,4 +127,4 @@ if __name__ == "__main__":
     topics = ["cond-mat"]
     years = [2025]  # Download papers from 2023 and 2024
     
-    process_multiple_queries(queries, topics, years, max_results_per_query=5)  # Download up to 10000 papers per year 
+    process_multiple_queries(queries, topics, years, max_results_per_query=10000)  # Download up to 10000 papers per year 
