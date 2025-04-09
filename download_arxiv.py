@@ -125,6 +125,6 @@ if __name__ == "__main__":
     # Example usage with multiple queries and years
     queries = ["cat:cond-mat*"]  # Search for all condensed matter papers
     topics = ["cond-mat"]
-    years = [2025]  # Download papers from 2023 and 2024
+    years = [2025, 2024]  # Download papers from 2023 and 2024
     
     process_multiple_queries(queries, topics, years, max_results_per_query=10000)  # Download up to 10000 papers per year 

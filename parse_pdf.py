@@ -165,12 +165,12 @@ def parse_pdf(pdf_path: str, output_dir: Optional[str] = None) -> dict:
             markdown_content.append(f"![Figure {img_index + 1}](images/page_{page_num + 1}_img_{img_index + 1}.{image_ext})\n\n")
     
     # Save text file
-    text_path = output_dir / "document.txt"
+    text_path = output_dir / "text.txt"
     with open(text_path, "w", encoding="utf-8") as f:
         f.write("\n".join(full_text))
     
     # Save markdown file
-    md_path = output_dir / "document.md"
+    md_path = output_dir / "markdown.md"
     with open(md_path, "w", encoding="utf-8") as f:
         f.write("".join(markdown_content))
     

@@ -522,7 +522,6 @@ def parse_markdown_file(file_path: Path) -> Material:
         elif line.strip() and not line.startswith('#'):
             break
     
-    print("HERE!")
 
     # Extract material formula from title
     formula = title.split('$\\mathrm{')[-1].split('}$')[0] if '$\\mathrm{' in title else ''
