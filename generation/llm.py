@@ -1,5 +1,5 @@
 from mistralai import Mistral
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 from cohere import ClientV2
 import os
 
@@ -13,6 +13,11 @@ class LLM:
             self.client = Mistral(api_key=os.getenv("MISTRAL_API_KEY"))
         elif self.provider == "cohere":
             self.client = ClientV2(api_key=os.getenv("COHERE_API_KEY"))
+        elif self.provider == "openai":
+            endpoint = "https://gpt-amayuelas.openai.azure.com/"
+            subscription_key = os.getenv("OPENAI_API_KEY")
+            api_version = "2024-12-01-preview"
+            self.client = AzureOpenAI(api_version=api_version, azure_endpoint=endpoint, api_key=subscription_key)
         elif self.provider == "vllm":
             self.client = OpenAI(base_url=f"http://localhost:{port}/v1", api_key=os.getenv("VLLM_API_KEY"))
         
@@ -41,6 +46,12 @@ class LLM:
             )
             return response.message.content[0].text
         
+        elif self.provider == "openai":
+            response = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return response.choices[0].message.content
         else:
             raise ValueError(f"Provider {self.provider} not supported")
     

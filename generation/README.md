@@ -9,7 +9,7 @@ The dataset generation process consists of the following steps:
 1. Download Kaggle JSON
 2. Check Downloaded Files
 3. Filter JSON
-4. Download Cloud
+4. Download GCloud
 5. Parse Data
 6. Filter LLM
 7. Generate Recipe

@@ -33,5 +33,5 @@ def count_recipes(dir_path: str):
     print(f"Sum of all values in material_categories: {sum(material_categories.values())}")
 
 if __name__ == "__main__":
-    dir_path = "data_arxiv/cond-mat/parsed/2018"
+    dir_path = "../data_arxiv/cond-mat/parsed/2002"
     count_recipes(dir_path) 

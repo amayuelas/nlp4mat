@@ -1,0 +1,82 @@
+## Target Material:
+    Chemical Formula: 2DPA-1
+    Form: Two-dimensional polyaramid
+    Expected Purity: >99%
+
+## Reagents:
+    1. Melamine
+       - Chemical Formula: $\text{C}_3\text{H}_6\text{N}_6$
+       - Purity: >99%
+       - Form: Powder
+    2. Trimesic acid trichloride
+       - Chemical Formula: $\text{C}_9\text{H}_3\text{Cl}_3\text{O}_3$
+       - Purity: >99%
+       - Form: Powder
+    3. *N*-methyl-2-pyrrolidone (NMP)
+       - Chemical Formula: $\text{C}_5\text{H}_9\text{NO}$
+       - Purity: >99%
+       - Form: Liquid
+    4. Pyridine
+       - Chemical Formula: $\text{C}_5\text{H}_5\text{N}$
+       - Purity: >99%
+       - Form: Liquid
+    5. Ethyl alcohol
+       - Chemical Formula: $\text{C}_2\text{H}_5\text{OH}$
+       - Purity: >99%
+       - Form: Liquid
+    6. Deionized water ($\text{H}_2\text{O}$)
+       - Purity: >99%
+       - Form: Liquid
+    7. Acetone
+       - Chemical Formula: $\text{C}_3\text{H}_6\text{O}$
+       - Purity: >99%
+       - Form: Liquid
+
+## Environment Parameters:
+    Temperature Range: $20-25\,^\circ\text{C}$ (Room Temperature)
+    Atmosphere: Ambient
+    Pressure: Ambient (1 atm)
+    Humidity: Ambient
+
+## Equipment:
+    1. Vessels:
+       - Type: Glass vial
+         Specifications: 40 mL, borosilicate
+    2. Processing Equipment:
+       - Type: Stirring apparatus
+         Specifications: Magnetic stirrer, temperature control
+       - Type: Bath sonicator
+         Specifications: Standard laboratory grade
+       - Type: Filtration apparatus
+         Specifications: Standard laboratory grade
+       - Type: Centrifuge
+         Specifications: Standard laboratory grade
+       - Type: Vacuum oven
+         Specifications: Temperature range up to 100°C, vacuum capability
+    3. Safety Equipment:
+       - Type: Personal protective equipment
+         Specifications: Nitrile gloves, lab coat, safety glasses
+
+## Procedure:
+    1. Preparation of the Reaction Mixture:
+       - Weigh out 126 mg (1 mmol) of melamine and 265 mg (1 mmol) of trimesic acid trichloride
+       - Add these to a 40 mL vial equipped with a stir bar
+       - Add 9 mL of *N*-methyl-2-pyrrolidone and 1 mL of pyridine to the vial
+       - Stir the mixture at room temperature (20–25 ºC)
+    2. Gel Formation:
+       - Continue stirring for 16 hours until the reaction mixture forms a gel
+    3. Purification:
+       - Cut the gel into small pieces
+       - Soak the pieces in 80 mL of ethyl alcohol
+       - Perform bath sonication for 30 minutes if necessary
+       - Filter or centrifuge the resulting cloudy mixture
+       - Wash the filtered or centrifuged product with 80 mL of deionized water and 80 mL of acetone
+    4. Drying:
+       - Dry the product in a vacuum oven at 100°C for 16 hours
+    5. Storage:
+       - Store the resulting pale-yellow powder in a clean, dry container
+
+## Notes:
+    - The reaction should be conducted under ambient conditions.
+    - The resulting 2DPA-1 powder can be further processed into nanofilms or other forms for characterization and application.
+    - The purity and yield of the product can be verified using Fourier-transform infrared (FTIR) spectroscopy and other analytical techniques.

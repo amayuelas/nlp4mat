@@ -11,8 +11,8 @@ The recipe should include the following sections:
 1. Target Material
 2. Reagents
 3. Environment Parameters
-4. Equipment and Tools
-5. Detailed Procedure
+4. Equipment
+5. Procedure
 6. Notes (if any)
 
 Please format the response exactly like this example and use LaTeX for mathematical expressions and chemical formulas:
@@ -44,7 +44,7 @@ Please format the response exactly like this example and use LaTeX for mathemati
     Pressure: Ambient (1 atm)
     Humidity: <1% RH (in glovebox)
 
-## Equipment and Tools:
+## Equipment:
     1. Vessels:
        - Type: Glass vial
          Specifications: 20 mL, borosilicate
@@ -99,6 +99,11 @@ Here is the paper text:
 
 {paper_text}
 
+IMPORTANT:
+- Do not include any other text than the synthesis recipe.
+- Do not include information that is not in the paper. And do not assume any information.
+- Do not include any other sections than the ones specified in the example.
+
 Your synthesis recipe: """
 
 
@@ -127,139 +132,7 @@ def clean_extraction(text: str) -> str:
     return text
 
 
-def parse_text_to_json(text):
-    # Define regex patterns for each section with flexible word matching
-    patterns = {
-        "target_material": r"##\s*Target\s*Material\s*:\s*(.*?)\s*(?:##|$)",
-        "reagents": r"##\s*Reagents\s*:\s*(.*?)\s*(?:##|$)",
-        "environment_parameters": r"##\s*Environment\s*Parameters\s*:\s*(.*?)\s*(?:##|$)",
-        "equipment": r"##\s*Equipment\s*and\s*Tools\s*:\s*(.*?)\s*(?:##|$)",
-        "procedure": r"##\s*Procedure\s*:\s*(.*?)\s*(?:##|$)",
-        "notes": r"##\s*Notes\s*:\s*(.*?)\s*(?:##|$)",
-    }
-
-    # Initialize the result dictionary with nested structure
-    result = {
-        "target_material": {
-            "chemical_formula": "",
-            "form": "",
-            "expected_purity": ""
-        },
-        "reagents": [],
-        "environment_parameters": {},
-        "equipment": {
-            "vessels": [],
-            "processing_equipment": [],
-            "safety_equipment": []
-        },
-        "procedure": [],
-        "notes": []
-    }
-
-    # Extract and clean each section using the defined patterns
-    for key, pattern in patterns.items():
-        match = re.search(pattern, text, re.DOTALL | re.IGNORECASE)
-        if match:
-            content = match.group(1).strip()
-            
-            if key == "target_material":
-                # Parse target material details
-                formula_match = re.search(r"Chemical\s*Formula:\s*(.*?)(?:\n|$)", content)
-                form_match = re.search(r"Form:\s*(.*?)(?:\n|$)", content)
-                purity_match = re.search(r"Expected\s*Purity:\s*(.*?)(?:\n|$)", content)
-                
-                if formula_match:
-                    result[key]["chemical_formula"] = clean_extraction(formula_match.group(1))
-                if form_match:
-                    result[key]["form"] = clean_extraction(form_match.group(1))
-                if purity_match:
-                    result[key]["expected_purity"] = clean_extraction(purity_match.group(1))
-            
-            elif key == "reagents":
-                # Parse reagents with their details
-                reagent_blocks = re.split(r'\n\s*\d+\.\s*', content)
-                for block in reagent_blocks:
-                    if block.strip():
-                        reagent = {}
-                        name_match = re.search(r'^(.*?)(?:\n|$)', block)
-                        if name_match:
-                            reagent["name"] = clean_extraction(name_match.group(1))
-                        
-                        formula_match = re.search(r'Chemical\s*Formula:\s*(.*?)(?:\n|$)', block)
-                        if formula_match:
-                            reagent["chemical_formula"] = clean_extraction(formula_match.group(1))
-                        
-                        purity_match = re.search(r'Purity:\s*(.*?)(?:\n|$)', block)
-                        if purity_match:
-                            reagent["purity"] = clean_extraction(purity_match.group(1))
-                        
-                        form_match = re.search(r'Form:\s*(.*?)(?:\n|$)', block)
-                        if form_match:
-                            reagent["form"] = clean_extraction(form_match.group(1))
-                        
-                        if reagent:
-                            result[key].append(reagent)
-            
-            elif key == "environment_parameters":
-                # Parse environment parameters
-                params = re.findall(r'([^:]+):\s*(.*?)(?:\n|$)', content)
-                for param, value in params:
-                    result[key][clean_extraction(param.lower().replace(" ", "_"))] = clean_extraction(value)
-            
-            elif key == "equipment":
-                # Parse equipment categories
-                category_patterns = {
-                    "vessels": r"1\.\s*Vessels:(.*?)(?:\n\s*\d+\.|$)",
-                    "processing_equipment": r"2\.\s*Processing\s*Equipment:(.*?)(?:\n\s*\d+\.|$)",
-                    "safety_equipment": r"3\.\s*Safety\s*Equipment:(.*?)(?:\n|$)"
-                }
-                
-                for category, pattern in category_patterns.items():
-                    category_match = re.search(pattern, content, re.DOTALL)
-                    if category_match:
-                        category_content = category_match.group(1).strip()
-                        # Split into individual equipment items
-                        equipment_items = re.split(r'\n\s*-\s*Type:', category_content)
-                        
-                        for item in equipment_items:
-                            if item.strip():
-                                equipment = {}
-                                # Extract type (first line)
-                                type_match = re.search(r'^(.*?)(?:\n|$)', item)
-                                if type_match:
-                                    equipment["type"] = clean_extraction(type_match.group(1))
-                                
-                                # Extract specifications
-                                specs_match = re.search(r'Specifications:\s*(.*?)(?:\n\s*-|$)', item, re.DOTALL)
-                                if specs_match:
-                                    equipment["specifications"] = clean_extraction(specs_match.group(1))
-                                
-                                if equipment and "type" in equipment:
-                                    result[key][category].append(equipment)
-            
-            elif key == "procedure":
-                # Parse procedure steps
-                steps = re.split(r'\n\s*\d+\.\s*', content)
-                for step in steps:
-                    if step.strip():
-                        step_content = re.findall(r'-\s*(.*?)(?:\n|$)', step)
-                        if step_content:
-                            result[key].append({
-                                "step": clean_extraction(step.split('\n')[0]),
-                                "details": [clean_extraction(detail) for detail in step_content]
-                            })
-            
-            elif key == "notes":
-                # Parse notes as bullet points
-                notes = re.findall(r'-\s*(.*?)(?:\n|$)', content)
-                result[key] = [clean_extraction(note) for note in notes if note.strip()]
-
-    return result
-
-
-
-
-def extract_synthesis_recipe(paper_text_path: str, model_name: str = "mistralai/Mistral-Small-3.1-24B-Instruct-2503", provider: str = "vllm") -> dict:
+def extract_synthesis_recipe(paper_text_path: str, model_name: str = "mistralai/Mistral-Small-3.1-24B-Instruct-2503", provider: str = "vllm") -> str:
     """
     Extract a synthesis recipe from a paper text file using an LLM.
     
@@ -269,30 +142,21 @@ def extract_synthesis_recipe(paper_text_path: str, model_name: str = "mistralai/
         provider (str): Provider of the LLM service ("mistral" or "vllm")
         
     Returns:
-        dict: Structured dictionary containing the recipe components
+        str: The formatted recipe text
     """
     # Read the paper text
     with open(paper_text_path, 'r') as f:
         paper_text = f.read()
     
-
     # Initialize LLM and get response
     llm = LLM(model_name=model_name, provider=provider)
     formatted_prompt = prompt.format(paper_text=paper_text)
     response = llm.generate_text(formatted_prompt)
-        
-    # Parse the response into a structured dictionary
-    json_response = parse_text_to_json(response)
     
-    # Save to JSON file
-    output_path = os.path.join(os.path.dirname(paper_text_path), "synthesis_step_by_step.txt")
+    # Save to text file
+    output_path = os.path.join(os.path.dirname(paper_text_path), "recipe.txt")
     with open(output_path, 'w') as f:
         f.write(response)
-
-    # Save JSON response to file
-    json_output_path = os.path.join(os.path.dirname(paper_text_path), "synthesis_step_by_step.json")
-    with open(json_output_path, 'w') as f:
-        json.dump(json_response, f, indent=2)
         
     return response
 
@@ -336,20 +200,19 @@ if __name__ == "__main__":
         try:
             # Create output directory structure
             relative_path = os.path.relpath(paper_path, args.input_path)
-            output_dir = os.path.join(os.path.dirname(paper_path), "synthesis_output")
-            os.makedirs(output_dir, exist_ok=True)
+            output_dir = os.path.join(os.path.dirname(paper_path))
+            
+            # Check if filter.json exists and contains recipe
+            filter_json_path = os.path.join(output_dir, "filter.json")
+            if os.path.exists(filter_json_path):
+                with open(filter_json_path, 'r') as f:
+                    filter_data = json.load(f)
+                    if not filter_data.get("contains_recipe", False):
+                        print(f"\nSkipping {paper_path} - No recipe found in filter.json")
+                        continue
             
             recipe = extract_synthesis_recipe(paper_path, args.model, args.provider)
             
-            # Save to text file in the synthesis_output directory
-            output_path = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(paper_path))[0]}_synthesis.txt")
-            with open(output_path, 'w') as f:
-                f.write(recipe)
-            
-            # Save JSON response to file in the synthesis_output directory
-            json_output_path = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(paper_path))[0]}_synthesis.json")
-            with open(json_output_path, 'w') as f:
-                json.dump(parse_text_to_json(recipe), f, indent=2)
             
             print(f"\nSuccessfully processed: {paper_path}")
             print(f"Output saved to: {output_dir}")
