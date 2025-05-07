@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# MY additional files
+data/
+data*/
+markdowns/*
+output/*
